@@ -1,0 +1,27 @@
+﻿<Window x:Class="practice_1_entities.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:practice_1_entities"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="900">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="dg_BD_books" CanUserReorderColumns="False" Grid.ColumnSpan="4" CanUserDeleteRows="False" CanUserAddRows="False" CanUserResizeRows="False" IsReadOnly="True"/>
+        <Button Grid.Row="1" Width="210" Content="Книги" Click="Button_Click"/>
+        <Button Grid.Row="1" Grid.Column="1" Width="210" Content="Авторы" Click="Button_Click_1"/>
+        <Button Grid.Row="1" Grid.Column="2" Width="210" Content="Читатели" Click="Button_Click_2"/>
+        <Button Grid.Row="1" Grid.Column="3" Width="210" Content="Заём Книг" Click="Button_Click_3"/>
+        <Frame x:Name="PageFrame" Grid.ColumnSpan="4" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>
